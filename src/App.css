@@ -1,40 +1,73 @@
-header {
-  text-align: center;
-  padding: 20px;
-  background-color: #f4f4f4;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #252525;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
 header {
   text-align: center;
-  padding: 20px;
-  background-color: #310d36;
+  padding: 15px;
+  background-color: #9b0074;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
 .buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 20px;
 }
 
 button {
-  padding: 10px 15px;
+  padding: 12px 18px;
   border: none;
   cursor: pointer;
-  background-color: #007bff;
+  background-color: #9b0074;
   color: white;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 1rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #9b0015;
+  transform: scale(1.05);
 }
 
 button.active {
   background-color: #ffa500;
   color: black;
+  font-weight: bold;
 }
 
 .language-card {
@@ -49,14 +82,36 @@ button.active {
 
 .language-card h2 {
   margin-bottom: 10px;
-  color: #333;
+  color: #222;
+  font-size: 1.5rem;
 }
 
 .language-card p {
   font-size: 1rem;
-  color: #666;
+  color: #555;
+  line-height: 1.5;
 }
 
 .language-card:hover {
   transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  main {
+    width: 95%;
+  }
+
+  header {
+    font-size: 1.5rem;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
 }
