@@ -1,7 +1,10 @@
-function LanguageButton() {
+function LanguageButton({ lang, setSelectedLanguage, selectedLanguage }) {
     return (
-      <button>
-        <h1>Learn Web Development</h1>
+      <button
+        className={selectedLanguage?.id === lang.id ? "active" : ""}
+        onClick={() => setSelectedLanguage(lang)}
+      >
+        {lang.title}
       </button>
     );
   }
